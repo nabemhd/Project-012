@@ -1,11 +1,12 @@
 pipeline {
     agent any
 
-    }
-environment {
-    PATH = "/opt/apache-maven-3.9.2/bin:$PATH"
+
+ environment {
+    PATH = "/opt/maven/bin:$PATH"
 }
-    stages {
+
+ stages {
         stage("build"){
             steps {
                  echo "----------- build started ----------"
@@ -13,4 +14,5 @@ environment {
                  echo "----------- build complted ----------"
             }
         }
+    }
 }
